@@ -7,7 +7,9 @@ describe Dice do
   end
 
   it 'expects 1 to 6 when roll is called' do
-    expect(subject.roll).to eq(1 || 2 || 3 || 4 || 5 || 6)
+    expect(subject.roll).to be_between(1, 6)
   end
+
+  it { is_expected.to respond_to(:roll).with(1).argument }
 
 end

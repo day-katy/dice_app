@@ -1,5 +1,7 @@
 class Dice 
-  def roll
-    moves = [1, 2, 3, 4, 5, 6].sample
+
+  def roll(number_of_dice = 1)
+    rand(6) + 1
   end
+
 end 
